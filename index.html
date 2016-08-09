@@ -1,50 +1,20 @@
 <html ng-app="hover">
 
 <head>
-
-  <script src= "bower_components/angular/angular.js"> </script>
-  <script src="angular-hovercard.js"></script>
-   <link rel ="stylesheet" href = "stylesheet/angular-hovercard.css">
-
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
-
+    <script src="bower_components/angular/angular.js">
+    </script>
+    <script src="angular-hovercard.js"></script>
+    <link rel="stylesheet" href="stylesheet/angular-hovercard.css">
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
 </head>
 
-
-<body ng-controller = "myContrl" style = "margin-left : 200px; margin-top:200px;">
-
-
-<div class = "container">
-    <div class = "row">
-            
-   <div class = "col-sm-2">
-    <div hovercard placement = "bottomLeft" data = "copysheet1" /></div>
-  </div> 
-
- <div class = "col-sm-2">
-  <div hovercard placement = "bottomRight" data = "copysheet2" /> </div>
-</div> 
-
-<div class = "col-sm-2">
-  <div hovercard placement = "topLeft" data = "copysheet1" /> </div>
-</div>
-
-<div class = "col-sm-2">
-  <div hovercard placement = "topRight" data = "copysheet2" /> </div>
-</div>
-
-</div>
-
-
-</div>
-
-
-
-
-
+<body ng-controller="myContrl" style="margin-left : 200px; margin-top:200px;">
+    <div hovercard placement="topLeft" data="copysheet1" class="angular-hovercard">
+        <img src="Images/copysheet1-min.jpg" alt="Computer Man" align="middle" width="200" height="200">
+    </div>
 </body>
 
 </html>
