@@ -1,11 +1,11 @@
-var app = angular.module('hover', ['hovercard.tmpls']);
+var app = angular.module('hover', []);
 
 app.directive('hovercard', function() {
     return {
         restrict: 'EA',
         transclude: true,
         controller: 'myContrl',
-        templateUrl: 'template/angular-hovercard.tmpl',
+        templateUrl: 'angular-hovercard.html',
         scope: {
             data: '='
         },
@@ -13,8 +13,8 @@ app.directive('hovercard', function() {
 
             $scope.show = {};
             $scope.show.card = false;
-            $scope.hoverTmplUrl = "templates/hoverCardDetail.html";
-            var placement = $attrs.placement || 'bottomRight';
+            $scope.hoverTmplUrl = "hoverCardDetail.html";
+            var placement = $attrs.placement ||'bottomRight';
             $scope.hoverLabelStyle = {};
             $scope.hoverCardStyle = {};
 
@@ -27,14 +27,6 @@ app.directive('hovercard', function() {
         }
     };
 });
-
-angular.module('hovercard.tmpls', []).run([
-    '$templateCache',
-    function($templateCache) {
-        $templateCache.put('template/angular-hovercard.tmpl', '<ng-transclude ng-mouseenter="showCard = true;" ng-mouseleave="showCard = false;"></ng-transclude><label class=angular-hovercard-label ng-class="{ \'angular-hovercard-active\': showCard }" ng-style=hoverLabelStyle></a></label><embed ng-src = "{{data.zoomImageSource}}" height = "300" width = "300" class=angular-hovercard-detail ng-class="{ \'angular-hovercard-active\': showCard }" ng-style=hoverCardStyle>');
-    }
-]);
-
 app.controller('myContrl', function($scope) {
     $scope.copysheet1 = {
         zoomImageSource: "Images/CopySheet_1.jpg",

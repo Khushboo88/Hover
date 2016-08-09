@@ -1,0 +1,4 @@
+<ng-transclude ng-mouseenter="showCard = true;" ng-mouseleave="showCard = false;"></ng-transclude>
+<label class=angular-hovercard-label ng-class="{'angular-hovercard-active': showCard }" ng-style=hoverLabelStyle>
+</label>
+<embed ng-src = "{{data.zoomImageSource}}" height = "300" width = "300" class=angular-hovercard-detail ng-class="{ 'angular-hovercard-active': showCard }" ng-style=hoverCardStyle>
